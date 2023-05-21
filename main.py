@@ -15,12 +15,13 @@ def demander_age():
             print("ERREUR: Vous devez rentrer un nombre pour l'âge.")
     return age_int
 
+def afficher_informations_personne(nom, age):
+    print(f"Vous vous appelez {nom}. Vous avez {age} ans.")
+    print(f"L'année prochaine vous aurez {age + 1} ans.")
+
 nom = demander_nom()
 age = demander_age()
+afficher_informations_personne(nom, age)
 
-
-
-print(f"Vous vous appelez {nom}. Vous avez {age} ans.")
-print(f"L'année prochaine vous aurez {age + 1} ans.")
 
 
