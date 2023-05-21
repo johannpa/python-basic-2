@@ -19,14 +19,18 @@ def afficher_informations_personne(nom, age):
     print()
     print(f"Vous vous appelez {nom}. Vous avez {age} ans.")
     print(f"L'année prochaine vous aurez {age + 1} ans.")
-    if age < 10:
-        print("Vous êtes un enfant.")
-    elif age == 17:
+    if age == 17:
         print("Vous êtes presque majeur.")
+    elif 12 <= age < 18: # elif age >= 12 and age < 18: est équivalent à elif 12 <= age < 18:. Sinon le and et plus utile quand on à 2 variables différentes pour le test.
+        print("Vous êtes un adolescent.")
+    elif age == 1 or age == 2:
+        print("Vous êtes un bébé.")
     elif age == 18:
         print("Vous êtes tout juste majeur : Félicitation.")
     elif age >= 18:
         print("Vous êtes majeur.")
+    elif age < 10:
+        print("Vous êtes un enfant.")
     else:
         print("Vous êtes mineur.")
 
