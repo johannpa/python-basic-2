@@ -20,14 +20,21 @@ def afficher_informations_personne(nom, age):
     print(f"Vous vous appelez {nom}. Vous avez {age} ans.")
     print(f"L'année prochaine vous aurez {age + 1} ans.")
 
-    if age >= 18:
+    if age == 17:
+        print("Vous êtes presque majeur.")
+    elif age == 18:
+        print("Vous êtes tout juste majeur : Félicitation.")
+    elif age > 18:
         print("Vous êtes majeur.")
     else:
         print("Vous êtes mineur.")
 
 nom = demander_nom()
+nom1 = demander_nom()
 age = demander_age()
+age1 = demander_age()
 afficher_informations_personne(nom, age)
+afficher_informations_personne(nom1, age1)
 
 
 
