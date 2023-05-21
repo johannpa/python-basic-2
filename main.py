@@ -16,8 +16,14 @@ def demander_age():
     return age_int
 
 def afficher_informations_personne(nom, age):
+    print()
     print(f"Vous vous appelez {nom}. Vous avez {age} ans.")
     print(f"L'année prochaine vous aurez {age + 1} ans.")
+
+    if age >= 18:
+        print("Vous êtes majeur.")
+    else:
+        print("Vous êtes mineur.")
 
 nom = demander_nom()
 age = demander_age()
